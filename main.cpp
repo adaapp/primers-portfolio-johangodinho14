@@ -2,7 +2,7 @@
 #include <string> //defines string types and conventions including begin & end iterator; for more info see http://www.cplusplus.com/reference/string/
 #include <algorithm>//defines a collection of ranged functions; for more info see http://www.cplusplus.com/reference/algorithm/
 #include <random>//defines random number generation facilities; for more info see http://wwww.cplusplus.com/reference/random/
-#include <ctime>//declares a set of functions, macros and types to work with date and time information e.g. the time() function is used to get the current time
+#include <ctime>//declares a set of functions, macros and types to work with date and time information e.g. the time() function is used to get the current time 
 
 //include default source files for daily primer challenges
 #include "include/monday.h"
@@ -29,6 +29,12 @@ int main() {
 void prompt(void) {
   std::cout << "\nPress 'Enter' to continue...\n";
   std::cin.get(); //wait for a key press
+}
+
+int main1(){
+  std::string hello;
+  getline(std::cin, hello);
+  return 0;
 }
 
 void menu(void) {
@@ -99,4 +105,7 @@ void menu(void) {
 	} while(choice != 0);
 
 	std::cout << " - Done\n\n";
+  main1();
 }
+
+
