@@ -51,7 +51,8 @@ void subMenu(){
   std::cout<<"\nPress 'K' to convert from Centigrade to Kelvin";
 }
 
-int convertTemperature(){
+//Combines all helper functions to convert temperatures based on user input
+void convertTemperature(void){
   //Declaring variables
   std:: string strTemperature;
   std:: string selectedOption;
@@ -88,6 +89,7 @@ int convertTemperature(){
     }
     else{
       std::cout<<"\nInvalid option selected."; 
+      return;
     }
 
     //Displaying processed result and rounding result
@@ -97,15 +99,11 @@ int convertTemperature(){
   else{
     std::cout<<"\nInvalid number entered as starting temperature.";
   }
-
-  return 0;
 }
 
 void fahrenheitCentigradeConversion(void) {
 	convertTemperature();
 }
-
-
 
 void selfServiceCheckout(void) {
 	std::cout << " - selfServiceCheckout: not yet implemented\n\n";
