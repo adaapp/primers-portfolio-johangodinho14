@@ -103,6 +103,7 @@ void convertTemperature(void){
 }
 
 void fahrenheitCentigradeConversion(void) {
+  std::cout<<std::fixed<<std::setprecision(2);
 	convertTemperature();
 }
 
