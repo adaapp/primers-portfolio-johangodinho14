@@ -105,7 +105,121 @@ void fahrenheitCentigradeConversion(void) {
 	convertTemperature();
 }
 
+//------------------------ Self Service Checkout ------------------------------
+
+//Calculating Shopping Tax
+float calculateShoppingTax(float shoppingTaxConstant, float subtotal){
+  return (subtotal/100)*shoppingTaxConstant; 
+}
+
+//Calculate the overall total
+float calculateTotal(float shoppingTax, float subtotal){
+  return subtotal + shoppingTax;
+}
+
+//Update subtotal based on the quantity and cost
+float addItems(float subtotal,int quantity,float cost){
+  return subtotal + (quantity * cost);
+}
+
+//Display results 
+void displayResults(float subtotal,float shoppingTax,float total){
+  std::cout<<"Thank you.\n\n";
+  std::cout<<"Subtotal:£"<<subtotal;
+  std::cout<<"\nShopping Tax:£"<<shoppingTax;
+  std::cout<<"\n\nTotal:"<<total;
+}
+
+//Find if a given string is a valid integer
+bool isInteger(std:: string value){
+    /*
+      Input:
+          * Value to be tested 
+      Output:
+          * true  (1) -> if value is a valid integer
+          * false (0) -> if value isn't a valid integer 
+    */
+  
+  //Regex to recognize valid integers
+   std::regex validInteger("\\d+");
+   
+   if(regex_match(value,validInteger)){
+     return true;
+   }else{
+     return false;
+   }
+}
+
+//Find if a given string is a valid float
+bool isFloat(std:: string value){
+    /*
+      Input:
+          * Value to be tested 
+      Output:
+          * true  (1) -> if value is a valid float
+          * false (0) -> if value isn't a valid float 
+    */
+   std::regex validFloat("[+-]?(?=[.]?[0-9])[0-9]*(?:[.][0-9]*)?(?:[Ee][+-]?[0-9]+)?");
+   
+   if(regex_match(value,validFloat)){
+     return true;
+   }else{
+     return false;
+   }
+}
+
+void selfServiceCheckoutMain(void) {
+  //Declaring variables
+  std::string stringQuantity;
+  std::string stringCost;
+  int   quantity            = 1;
+  int   itemNumber          = 1;
+  float shoppingTaxConstant = 5.5; //Represents percentage
+  float shoppingTax         = 0.0;
+  float subtotal            = 0.0;
+  float cost;
+  float total;
+
+  do{
+    //Getting input from the user about quantity and item price
+    std::cout<<"\nPlease enter the quantity for item "<<itemNumber<<" (or 0 to finish):";
+    getline(std::cin,stringQuantity);
+
+    //Checking if quantity is a valid integer
+    if(isInteger(stringQuantity)){
+          //Converting quantity from str to integer
+          quantity = stoi(stringQuantity);
+
+          //Making sure the user has not quit the program by setting quantity to 0
+          if(quantity > 0){
+              std::cout<<"Please enter item "<<itemNumber<<"'s cost:";
+              getline(std::cin,stringCost);
+              //Checking if cost is a valid float
+              if(isFloat(stringCost)){
+                //Converting cost from str to float
+                cost     = stof(stringCost);
+                //Updating sub-total 
+                subtotal = addItems(subtotal,quantity,cost);
+                //Updating item number 
+                itemNumber ++;
+              }else{
+                std::cout<<"\nInvalid cost entered";
+              }
+          }
+
+    }else{
+      std::cout<<"\nInvalid quantity entered";
+    }
+  }while(quantity>0);
+
+  //Calculating shopping tax based on the shopping tax constant
+  shoppingTax = calculateShoppingTax(shoppingTaxConstant,subtotal);
+  total       = calculateTotal(shoppingTax,subtotal);
+  //Displaying end results (subtotal, shopping tax, total)
+  displayResults(subtotal,shoppingTax,total);
+}
+
 void selfServiceCheckout(void) {
-	std::cout << " - selfServiceCheckout: not yet implemented\n\n";
+  selfServiceCheckoutMain();
 }
 
