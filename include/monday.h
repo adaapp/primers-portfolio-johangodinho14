@@ -1,5 +1,6 @@
 #include <iostream>
 #include <regex>
+#include <iomanip>
 
 //Find if a given string is a valid number
 bool isNumeric(std:: string value){
@@ -215,11 +216,13 @@ void selfServiceCheckoutMain(void) {
   //Calculating shopping tax based on the shopping tax constant
   shoppingTax = calculateShoppingTax(shoppingTaxConstant,subtotal);
   total       = calculateTotal(shoppingTax,subtotal);
-  //Displaying end results (subtotal, shopping tax, total)
-  displayResults(subtotal,shoppingTax,total);
+  
+  //Displaying end results (subtotal, shopping tax, total) and rounding to 2 decimals
+  displayResults(round(subtotal),round(shoppingTax),round(total));
 }
 
 void selfServiceCheckout(void) {
+  std::cout<<std::fixed<<std::setprecision(2);
   selfServiceCheckoutMain();
 }
 
