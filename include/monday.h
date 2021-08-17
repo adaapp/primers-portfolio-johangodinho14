@@ -1,7 +1,6 @@
 #include <iostream>
 #include <regex>
 
-
 //Find if a given string is a valid number
 bool isNumeric(std:: string value){
     /*
@@ -38,16 +37,21 @@ float ftoc(float f){
   return ((f - 32) * 5/9);
 }
 
+//Centigrade to Kelvin
+float ctok(float c){
+  return c + 273.15;
+}
+
 
 //Sub-menu
 void subMenu(){
   //Displaying sub-menu options
   std::cout<<"Press 'C' to convert from Fahrenheit to Centigrade.";
-  std::cout<<"\nPress ‘F’ to convert from Centigrade to Fahrenheit.";
+  std::cout<<"\nPress 'F' to convert from Centigrade to Fahrenheit.";
+  std::cout<<"\nPress 'K' to convert from Centigrade to Kelvin";
 }
 
-//Combines all helper functions to convert temperatures based on user input
-void convertTemperature(){
+int convertTemperature(){
   //Declaring variables
   std:: string strTemperature;
   std:: string selectedOption;
@@ -78,9 +82,12 @@ void convertTemperature(){
       result = ctof(temperature);   
       label  = "Centigrade"; 
     }
+    else if(selectedOption == "K" or selectedOption == "k"){
+      result = ctok(temperature);
+      label  = "Centigrade";
+    }
     else{
       std::cout<<"\nInvalid option selected."; 
-      return;
     }
 
     //Displaying processed result and rounding result
@@ -90,13 +97,14 @@ void convertTemperature(){
   else{
     std::cout<<"\nInvalid number entered as starting temperature.";
   }
-}
 
- 
+  return 0;
+}
 
 void fahrenheitCentigradeConversion(void) {
 	convertTemperature();
 }
+
 
 
 void selfServiceCheckout(void) {
