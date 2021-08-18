@@ -121,6 +121,105 @@ void passwordComplexityChecker(void) {
 }
 
 // --------------------------- Employee List Removal -------------------------
+
+//Returns noOfEmployees of given array
+int noOfEmployeesIn(std::string array[],int size){
+    int noOfEmployees = 0;
+    for(int i=0;i<size;i++){
+        if(array[i]=="none"){
+            continue;
+        }
+        noOfEmployees++;
+    }
+    return noOfEmployees;
+}
+
+
+//Prints given array
+//Ignores string -> "none"
+void printArray(std::string array[], int size,int noOfEmployees){
+    std::cout<<"\nThere are "<<noOfEmployees<<" employees\n";
+    for(int i=0;i<size;i++){
+        if(array[i]=="none"){
+            continue;
+        }
+        std::cout<<array[i]<<std::endl;
+    }
+}
+
+//Finds index of given string, returns -1 if string was not found in array
+int indexOf(std::string array[], int size, std::string searchValue){
+    for(int i=0;i<size;i++){
+        if(array[i]==searchValue){
+            return i;
+        }    
+    }
+    return -1;
+}
+
+//Replaces element at a given position (index) in the list with string "none"
+//NOTE : The function replaces element in array inplace rather than returning it
+void deleteElement(std::string array[],int targetIndex){
+    if(array[targetIndex]!="none"){
+        array[targetIndex] = "none";    
+    }
+}
+
+//Get string input from user and return the result
+std::string input(std::string message){
+    std::string temp;
+    std::cout<<message;
+    std::getline(std::cin,temp);
+    return temp;
+}
+
+void employeeListRemovalMain(){
+    //Declaring array with employee names
+    std::string names[] = {
+        "John Smith",
+        "Jaelynn Stuart",
+        "Kaley Barajas",
+        "Walter Collier",
+        "Cale Myers"
+    };
+    std::string selectedName;
+    int selectedNameIndex;
+    int size;
+    int noOfEmployees;
+    
+    do{
+        //Calculating size of array
+        size = (sizeof(names) / sizeof(names[0]));
+        //Getting the lenght of the array (number of valid elements / employees)
+        noOfEmployees = noOfEmployeesIn(names,size);
+        //Getting user input if noOfEmployees is > 0
+        if(noOfEmployees > 0){
+            //Displaying list of Employees
+            printArray(names,size,noOfEmployees);
+            //Getting user input
+            std::cout<<"\n";
+            selectedName = input("Enter an employee name to remove:");
+            std::cout<<"\n";
+            //Finding index of selectedName in the array
+            selectedNameIndex = indexOf(names,size,selectedName);
+            //Checkinf if the selectedName exists in the array
+            if(selectedNameIndex != -1){
+               //Replacing selectedName value with "none" in the array;
+               deleteElement(names,selectedNameIndex);
+            }else{
+               std::cout<<"Employee name entered does not exist in the list\n";   
+            } 
+        }else{
+            std::cout<<selectedName<<" was removed from the list\n";
+            std::cout<<"No more employees in list to show";
+        }
+       
+    }
+    while(noOfEmployees>0);
+ 
+}
+
+
 void employeeListRemoval(void) {
-	std::cout << " - employeeListRemoval: not yet implemented\n\n";
+  employeeListRemovalMain();
 }
