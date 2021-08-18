@@ -23,7 +23,7 @@ bool containsAlpha(std::string value){
 
 //Checks if a given string contains special characters
 bool containsSpecialCharacters(std::string value){
-    std::regex validSpecialCharacters("[@_!#$%^&*()<>?/|}{~:]");
+    std::regex validSpecialCharacters("[^a-zA-Z0-9]+");
     if(regex_search(value,validSpecialCharacters)){
       return true;  
     }else{
