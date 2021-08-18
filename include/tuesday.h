@@ -1,5 +1,6 @@
 #include <iostream>
 #include <regex>
+#include <vector>
 
 //Checks if a given string contains numerical digits
 bool containsDigit(std::string value){
@@ -97,27 +98,35 @@ bool isModerate(std:: string value){
     return false;
 }
  
-//Returns the strength of a password provided as the parameter.
+//Returns the value that corresponds the strength of a password provided as the parameter.
 int passwordComplexityCheckerMain(std:: string password){
     if(isWeak(password) == true){
         return 1;
     }
-    else if(isModerate(password) == true){
+    if(isModerate(password) == true){
         return 2;
     }
-    else if(isStrong(password) == true){
+    if(isStrong(password) == true){
         return 3;
     }
-    else if(isVeryStrong(password) == true){
+    if(isVeryStrong(password) == true){
         return 4;
     }
-    else{
-        return 0;
-    }
+    return 0;
 }
 
 void passwordComplexityChecker(void) {
-	std::cout<<passwordComplexityCheckerMain("hellowrold12");
+    int passwordComplexity;
+    std::vector<std::string> testPasswords = {"12345678","AB235","Password2021","Password2021!"};
+    
+    //Creating a map for passwordComplexityCheckerMain function outputs
+    std::map<int,std::string> map {{1,"Weak"},{2,"Moderate"},{3,"Strong"},{4,"Very Strong"}};
+    
+    //Finding the complexity of testPasswords
+    for(int i=0;i<testPasswords.size();i++){
+        passwordComplexity = passwordComplexityCheckerMain(testPasswords[i]);
+        std::cout<<"The  password '"<<testPasswords[i]<<"'"<<" is "<<map[passwordComplexity]<<"\n";
+    }
 }
 
 // --------------------------- Employee List Removal -------------------------
