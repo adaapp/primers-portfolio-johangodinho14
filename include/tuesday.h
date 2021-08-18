@@ -1,6 +1,7 @@
 #include <iostream>
 #include <regex>
 #include <vector>
+#include <map>
 
 //Checks if a given string contains numerical digits
 bool containsDigit(std::string value){
