@@ -7,9 +7,9 @@ class Car{
     private:
         std:: string colour_;
         std:: string make_;
-        std:: string engine_="Off";
-        std:: string lockStatus_="Unlocked";
-        bool isLocked_      =false;
+        std:: string engine_;
+        std:: string lockStatus_;
+        bool isLocked_;
         
 
     public:
