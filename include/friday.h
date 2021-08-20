@@ -130,6 +130,53 @@ void carClass(void) {
 }
 
 
+//----------------------- areaOf ---------------------------------
+#include <iostream>
+
+class Areaof{
+    private:
+         float PI_;
+    public:
+    
+        Areaof(){
+            PI_ = 3.14159; 
+        }
+        
+        //Area of circle
+        float size(float r){
+            float result = PI_ * (r*r);
+            return result;
+        };
+        
+        //Area of rectangle
+        float size(float w, float l){
+            float result = l*w;
+            return result;
+        }
+        
+        //Trapezoid
+        float size(float a,float b, float h){
+            float result = (((a+b)/2)*h);
+            return result;
+        }
+        
+        //Destructor
+        ~Areaof(){
+            std::cout<<"\nObject closed";
+        }
+};
+
+
+
+void areaOfMain(){
+   Areaof area;
+   std::cout<<"\n\nArea of Circle (r = 4.5): "<<area.size(4.5)<<std::endl;
+   std::cout<<"Area of Rectangle (w = 4,l = 5.9): "<<area.size(4,5.9)<<std::endl;
+   std::cout<<"Aera of Trapezoid (a = 6,b = 14,h = 7.5)"<<area.size(6,14,7.5)<<std::endl;
+}
+
+
+
 void areaOf(void) {
-		std::cout << " - areaOf: not yet implemented\n\n";
+  areaOfMain();
 }
