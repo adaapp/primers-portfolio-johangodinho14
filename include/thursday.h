@@ -53,11 +53,35 @@ void joinThreads(void){
     std::cout<< "Main thread: "<<std::this_thread::get_id()<<" ended\n";
 }
 
+//Detaches threads and displays output
+void detachThreads(void){
+    std::cout<< "\nDetach Threads\n\n";
+    
+    std::cout << "Main Thread: "<<std::this_thread::get_id()<<" started\n";
+    std::thread thread1(timer1); // Create a new thread that runs the timer1 function
+    std::thread thread2(timer2); // Create thread 2 that runs the timer2 function
+    
+    //Detaching threads so that they can execute by themself / independently
+    thread1.detach();
+    thread2.detach();
+    
+    //Waiting for detached threads to finish execution
+    sleep(timer1Duration + timer2Duration);
+    
+    std::cout<< "Main thread: "<<std::this_thread::get_id()<<" ended\n";
+}
+
 void joinDetachThreads(void) {
-	//Summary
-    //This primer uses threads to run multiple timers at the same time. In the output of the code we see that the main thread starts first after which thread1 and thread2 begin excuting their assigned functions.
-    //At the completion of each thread we are notified by a log in the console. Due to the sleep duration of timer1 being shorter we see that thread1 finsihes first followed by thread2, after which the main thread finally ends.
+    //Summary - 8a
+    //This primer uses threads to run multiple timers at the same time. In the output of the code we see that the main thread starts first after which thread 1 and thread thread2
+    //run their respective timer functions and notify via a message once the timer finishes.
     //The join statements help us make sure that we wait until the execution of each thread is completed before moving onto the next line of code.
     
     joinThreads();
+    detachThreads();
+    //Summary - 8b
+    //As an extension to primer 8a, I have added a detachThreads function that runs after the joinThreads function has finsihed executing. 
+    //detachThreads creates two threads that are detached after creation instead of using 'join'. This means that the threads are allowed to run independently
+    //hence the main thread will not wait for the completion of the threads, As a fix to this, I have added the sleep to wait for the 2 detached threads to complete. 
+    //Once the 2 detached threads complete, the main thread also ends.
 }
