@@ -84,4 +84,5 @@ void joinDetachThreads(void) {
     //detachThreads creates two threads that are detached after creation instead of using 'join'. This means that the threads are allowed to run independently
     //hence the main thread will not wait for the completion of the threads, As a fix to this, I have added the sleep to wait for the 2 detached threads to complete. 
     //Once the 2 detached threads complete, the main thread also ends.
+    //In primer 8-a, since we use thread.join(), we didn't need to use an additional sleep to wait for the threads to complete execution. On the other hand in primer 8-b we had to use an additional sleep statement to wait for both threads to finish execution.
 }
