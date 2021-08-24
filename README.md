@@ -2,16 +2,16 @@
 
 ## Section 1 - Primer Challenges
 ### Primer 1 - Fahrenheit / Centigrade Conversion
-This challenge requires us to allow a user to enter a value before selecting whether to convert it from Fahrenheit to Centigrade or Centigrade to Fahrenheit.  As part of the initial design the conversion algorithms were needed for both calculations. 
+This challenge involved converting Fahrenheit to centigrade and vice versa. In order to complete the challenge, I had to break the problem down into the following steps:
 
-To help complete this challenge I needed to break the overall problem down into the following main tasks: 
-* Get data from the user
-* Verify the data is in a suitable format
-* Create a method to convert F->C
-* Create a method to convert C->F
- 
+•	Getting an input from the user
+•	Checking which option, the user has selected (F-C or C-F)
+•	Creating separate functions to convert from (C-F and F-C)
+•	Running the relevant function based on the user input and outputting the result to the user.
+
 #### Reflection (as well as issues, challenges & resolutions)
-The biggest issue was related to testing the areas my solution failed, originally, I tested to see if it worked - however, it wasn’t until I tried to break it that I found some of the more serious issues with my design and implementation.  For example, ...
+The main challenge that I faced was adding the Kelvin conversion which was an additional exercise. Due to the well-structured code, I was able to add an additional function that calculates temperatures from Centigrade to Kelvin. I then linked the function with the conditional statements so that the user would be able to select the Centigrade to Kelvin temperature conversion. 
+Lastly to make sure that the code had validation, I added a conditional statement which would prompt the user if he/she were to enter an option that wasn’t on the menu.
 
 ### Primer 2 - Self-service Checkout
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
