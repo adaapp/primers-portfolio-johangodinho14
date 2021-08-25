@@ -114,11 +114,39 @@ The methods explained above are mainly getters and setters and are used by the m
 #### Reflection (as well as issues, challenges & resolutions)
 Overall, I enjoyed this challenge as the syntax of creating classes and the logic behind it was very similar to python. The challenging part of the primer was finding out how to instantiate the class with properties, rather than always using the default make and colour. Once that was sorted, the rest of the program worked well.
 
+### Primer 10 - Area of
+This challenge involved creating a general Areaof class that was able to workout the area of several shapes using a single method. The assignment specified making the use of private properties, function overload and a destructor as well. 
+
+#### Reflection (as well as issues, challenges & resolutions)
+Since I was new to the concept of function destructors, I had to carry out a bit of research based on how I could use a single method to find the area of several shapes solely based on the number parameters that are provided to the method. Once I wrapped my head around overloading functions, I was able to select three shapes that required different number of parameters to calculate area and then was able to use a single overloaded method in the class to workout the area of three given shapes.
+
 
 
 ## Section 2 - Programming Paradigms
 ### Programming Paradigms
-Simply put, a programming paradigm, for example, procedural, object-oriented, functional, structured, declarative, imperative and event driven can be described as a specific approach used when trying to solve a problem.  Although many programming languages can (and do) support multiple paradigms this discussion will focus more specifically on the possible benefits with examples of the potential differences and similarities of five from the above list. These are ...
+In this section of the README, I will be discussing 5 paradigms of programming along with their differences and benefits of using them.
+### Functional programming 
+Functional programming is a programming paradigm where programs are created by creating a composition of various pure functions. Pure functions are functions that are solely designed to serve one purpose and the outcome of them always remains the same. Functional programming avoids creating functions that depend on state or have other side effects.
+Using function programming could help make sure that you write pure functions which are easy to debug. It also helps ensure other functions aren’t affected if one of the functions breaks down since they don’t rely on state and always produce the same outcome. This helps ease the process of debugging and would also help improve reliability.
+### Structured 
+Structured programming is a program that is solely written with the constructions such as:
+•	Sequence – Sequence defines the order in which the instructions of a program are executed. 
+•	Repetition – Iteration or repetition is making the use of loops to execute a line or block of code several forever or until a given requirement is met.
+•	Selection – conditional statements, allow blocks of code to be executed only if a specific condition is met.
+Structured programming is used in almost all programs as it enables programmers with some of the fundamental functionalities such as loops, and conditional statements, which are a must while creating normal programs or algorithms. 
+Using structured programming allows for programs to be easier to read, while also allowing errors to be found easily, hence reducing the time spent debugging. This paradigm also helps define what the logical flow of the program should be 
+### Declarative
+Declarative programming is a programming paradigm which allows for the structure and elements of computer programs to express the logic of a function or computation without describing the actual instructions.
+The use of declarative programming can be very useful as it allows for higher order functions to be used and makes sure that the code is abstract and easy to understand. This helps ensure reduction in the overall amount of time that is taken to understand and debug code.
+### Event Driven
+Event driven programming is a programming paradigm in which the flow of the program is not defined and is determined by events that are triggered based on user actions or the code itself.
+Event driven programming can be very beneficial as it allows for code to be abstract while also allowing code to run in non-blocking fashion. This type of programming paradigm simplifies the creation of GUI’s and can be easy to understand. Using it could overall increase readability and help reduce the amount of time spent on debugging.
+### Object oriented
+Object oriented programming is a programming paradigm based on the concept of objects. These objects contain data and code, data is stored in the form of properties / members. The objects can also have behaviours which are known as methods.
+This method of programming allows for code to be as detailed or abstract as needed. It also allows code to be clean as it supports features such as inheritance which allows for methods and members of other classes to be shared.
+The concept of Object Oriented Programming allows for classes to instantiated into as many objects as required. Each object can be instantiated with different properties, which means that they could behave different if needed. The use of Object-Oriented Programming improves readability in code, while also making code abstract and allowing for a problem to be broken down into several classes. 
+
+
 
 ---
 ## Section 3 - Continued Professional Development
