@@ -25,6 +25,7 @@ This challenge involved creating a self-service checkout program that had the ab
 *	Calculate the total based on the subtotal and shopping tax once the user has pressed 0
 *	Display the subtotal, total and shopping tax breakdown to the user at the end of the loop.
 
+#### Reflection (as well as issues, challenges & resolutions)
 The main challenge I faced during the whole primer was getting used to the syntax in C++. I constantly ran into syntax errors due to the fact that I usually program in either JavaScript or python which are both high level languages. Once I got used to the syntax of C++, I was able to implement the primer without too many hurdles. Another issue I faced was constantly forgetting to change the user input from string to the right data type e.g., quantity has to be changed from string to int, this would cause bugs / errors, resulting in more time being spent debugging.
 
 ### Primer 3 - Password complexity checker
@@ -36,8 +37,26 @@ This primer involved using a lot of logic and inbuilt functions. In order to kee
 *	Return a count of the number of digits in a string
 *	Return a count of the number of alphabets in a string
 
+#### Reflection (as well as issues, challenges & resolutions)
 Once these helper functions were ready, I decided to further breakdown the problem by creating functions that would use the helper functions to determine whether a given password (string) was a weak, moderate, strong, or very strong password, based on the criteria provided in the assignment. Lastly the isWeak(), isModerate(), isStrong and isVeryStrong(), functions were used in combination with conditional statements to check the complexity of a given password (string).
 Breaking down the problem into the chunks (functions), allowed me to have pure functions with no side effects. Debugging in this manner was a lot simpler, as I could pinpoint errors and fix them easily.
+
+### Primer 4 - Employee list removal
+This primer was challenging as it involved making the decision of what data type was to be used to keep track of the employees. I decided to use an array of strings to create the program. Due to the fact that an array is static, and things cannot be deleted once it has been declared, I had to replace any deleted names (strings) from the list with a placeholder string. The loop that displayed the employee names from the array, recognised the placeholder string and knew not to display it to the user as it was programmed into it using a conditional statement. The breakdown of the program has been displayed below:
+
+*	Creating a function that can display employee names from the array to the user
+*	Implementing the conditional in the display function so that the loop doesn’t show the placeholder string used in place of deleted employees.
+*	Getting an input from the user (name of employee to be deleted – string)
+*	Creating a function to get the index of the deleted employee name in the array
+*	Creating a function to delete employee from the array based on given index. 
+
+#### Reflection (as well as issues, challenges & resolutions)
+Once the program was finished, I tested it to make sure that there were no bugs / errors. One of the issues I found was that the program wouldn’t tell the user if an inputted employee name wasn’t in the list. I realised this and added an output to let the user know if a given employee name didn’t exist in the array.
+ 
+### Primer 5 - Phone directory
+
+#### Reflection (as well as issues, challenges & resolutions)
+
 
 ## Section 2 - Programming Paradigms
 ### Programming Paradigms
