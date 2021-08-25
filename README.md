@@ -27,8 +27,17 @@ This challenge involved creating a self-service checkout program that had the ab
 
 The main challenge I faced during the whole primer was getting used to the syntax in C++. I constantly ran into syntax errors due to the fact that I usually program in either JavaScript or python which are both high level languages. Once I got used to the syntax of C++, I was able to implement the primer without too many hurdles. Another issue I faced was constantly forgetting to change the user input from string to the right data type e.g., quantity has to be changed from string to int, this would cause bugs / errors, resulting in more time being spent debugging.
 
+### Primer 3 - Password complexity checker
+This primer involved using a lot of logic and inbuilt functions. In order to keep the code, clean I decided to create helper functions that solely had a single purpose. I then used these functions to check the characteristics of a given password (string), e.g., does the password have digits? how many digits does the password have? etc. Shown below is the breakdown I used to split the problem into functions:
 
+*	Check if a string contains digits 
+*	Check if a string contains alphabets
+*	Check if a string contains special characters (used regex)
+*	Return a count of the number of digits in a string
+*	Return a count of the number of alphabets in a string
 
+Once these helper functions were ready, I decided to further breakdown the problem by creating functions that would use the helper functions to determine whether a given password (string) was a weak, moderate, strong, or very strong password, based on the criteria provided in the assignment. Lastly the isWeak(), isModerate(), isStrong and isVeryStrong(), functions were used in combination with conditional statements to check the complexity of a given password (string).
+Breaking down the problem into the chunks (functions), allowed me to have pure functions with no side effects. Debugging in this manner was a lot simpler, as I could pinpoint errors and fix them easily.
 
 ## Section 2 - Programming Paradigms
 ### Programming Paradigms
