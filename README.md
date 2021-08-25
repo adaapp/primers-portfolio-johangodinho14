@@ -98,6 +98,21 @@ This challenge involved creating two helper functions that would mainly be used 
 #### Reflection (as well as issues, challenges & resolutions)
 The detach function was a challenge as the main thread would complete without waiting for the 2 threads that were assigned to timers to be completed. To solve this challenge, I utilised the sleep function that was created in primer-7 to allow the program to sleep for 15 seconds, which is the amount of time it takes for both threads detached to complete.
 
+### Primer 9 - Car Class 
+This challenge involved creating a class (Car), that had several public methods that could be used by the user. The class also involved private members / properties to which only methods of the class had access to. Methods that were created in the class have been stated below:
+*	Set make – set the colour of the car 
+*	Set color – set the make of the car
+*	Get color – get the color of the car
+*	Get make – get the make of the car
+
+The methods explained above are mainly getters and setters and are used by the methods in the class to assign properties to the class while adding additional validation. The main methods available to the user via the menu have been stated below:
+* Engine on – Changes the status of the engine to on
+*	Engine off – Changes the status of the engine to off 
+*	Locked – Allows the car to be either locked or unlocked.
+*	Status - Displays all the properties of the car e.g., make, color, engine status, lock status.
+
+#### Reflection (as well as issues, challenges & resolutions)
+Overall, I enjoyed this challenge as the syntax of creating classes and the logic behind it was very similar to python. The challenging part of the primer was finding out how to instantiate the class with properties, rather than always using the default make and colour. Once that was sorted, the rest of the program worked well.
 
 
 
