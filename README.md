@@ -16,12 +16,20 @@ The main challenge that I faced was adding the Kelvin conversion which was an ad
 Lastly to make sure that the code had validation, I added a conditional statement which would prompt the user if he/she were to enter an invalid option.
 
 ### Primer 2 - Self-service Checkout
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac elit in magna porttitor convallis. Ut eu justo rutrum, luctus lorem a, pretium quam. Sed ut commodo lectus. Vestibulum ut ligula lorem. Nulla mattis varius ex ac luctus. Aenean nec laoreet enim. Sed lorem erat, vestibulum ut faucibus vel, pellentesque nec felis. Vivamus metus tellus, pretium eu sodales interdum, fringilla ut mauris. ....
+This challenge involved creating a self-service checkout program that had the ability to get user input related to the quantity and price of items. The program was required to apply a constant shopping tax to the sub-total and display the total amount (subtotal + shopping-tax) that has to be paid at the end. To create the program, I decided to split the problem into steps which have been stated below:
 
-..  
-..  
+* Getting input from the user regarding the price and quantity of items
+* Creating a loop that will keep asking for user input until the quantity entered is 0
+*	Keep track of the subtotal based on the quantity and price of the items 
+*	Calculate the shopping tax once the user has pressed 0
+*	Calculate the total based on the subtotal and shopping tax once the user has pressed 0
+*	Display the subtotal, total and shopping tax breakdown to the user at the end of the loop.
 
----
+The main challenge I faced during the whole primer was getting used to the syntax in C++. I constantly ran into syntax errors due to the fact that I usually program in either JavaScript or python which are both high level languages. Once I got used to the syntax of C++, I was able to implement the primer without too many hurdles. Another issue I faced was constantly forgetting to change the user input from string to the right data type e.g., quantity has to be changed from string to int, this would cause bugs / errors, resulting in more time being spent debugging.
+
+
+
+
 ## Section 2 - Programming Paradigms
 ### Programming Paradigms
 Simply put, a programming paradigm, for example, procedural, object-oriented, functional, structured, declarative, imperative and event driven can be described as a specific approach used when trying to solve a problem.  Although many programming languages can (and do) support multiple paradigms this discussion will focus more specifically on the possible benefits with examples of the potential differences and similarities of five from the above list. These are ...
