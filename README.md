@@ -55,7 +55,26 @@ Once the program was finished, I tested it to make sure that there were no bugs 
  
 ### Primer 5 - Phone directory
 
+This challenge involved creating a phone directory where the program was able to read data from a file and output contact details based on whether the user typed in a phone number or contact name. To solve this challenge, I broke down the problem into the following steps:
+
+*	Create a function that can read data from the file
+*	Create a function that can write data to a file which will include the dummy contact data
+*	Get an input from the user, asking for either the contact number or the contact’s name
+*	Create a split function that can split a given string into a vector based on a delimiter
+*	Create a loop that will go through the records in the file and match it to the user’s input 
+*	If the user’s input matches either the contact number or contact name, display their contact details.
+*	Get a count of how many records are being searched and display it to the user.
+
 #### Reflection (as well as issues, challenges & resolutions)
+Once the functions above were programmed, I tested the primer and found that the program wasn’t able to display 2 contact details if two contacts had the same name. This was due to the way the program was structured, as it was instructed to break out of the loop as soon as a match for the user input is found. This problem was resolved by getting rid of the break statement and re-structuring the code. I also added an extra piece of code that would tell the user if no matching records were found for the user input provided.
+
+### Primer 6 - Data file parser
+This challenge involved creating an advanced program that is able to read the data form a file, manipulate it, and present it in an organised manner separated by equal spaces. Due to some aspects of the challenge being similar to primer-5, I was able to re-use some of the functionality from primer-5, such as the read-file function and the split function. I decided to break the overall problem into the following steps:
+
+*	Create a function that can create the raw file that has to be parsed and displayed
+*	Create a function that can return length of string with max characters 
+
+
 
 
 ## Section 2 - Programming Paradigms
