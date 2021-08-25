@@ -146,11 +146,20 @@ Object oriented programming is a programming paradigm based on the concept of ob
 This method of programming allows for code to be as detailed or abstract as needed. It also allows code to be clean as it supports features such as inheritance which allows for methods and members of other classes to be shared.
 The concept of Object Oriented Programming allows for classes to instantiated into as many objects as required. Each object can be instantiated with different properties, which means that they could behave different if needed. The use of Object-Oriented Programming improves readability in code, while also making code abstract and allowing for a problem to be broken down into several classes. 
 
-
-
----
 ## Section 3 - Continued Professional Development
-### Benefits of becoming a Polyglot Programmer
-Vestibulum vitae semper sem. Duis leo leo, suscipit at felis non, pellentesque varius massa. Sed sit amet orci nibh. Morbi scelerisque faucibus elit, vitae mollis turpis finibus eget. In convallis euismod nunc non imperdiet. Duis ultricies pulvinar lorem, sed molestie nunc porta at. Aenean arcu ante, efficitur nec felis sed, feugiat iaculis turpis. Vestibulum eu elementum diam. Quisque nec tortor auctor, scelerisque ante vitae, fringilla tellus.
+Continued Professional Development is one of the key factors that define a great programmer. It is very important to keep updated with the latest programming languages and frameworks in order for a programmer to be as efficient as possible and create programs that are robust. A programmer that follows CPD will benefit highly as it increases productivity and employability too.
 
-Quisque ligula lectus, efficitur quis malesuada sit amet, malesuada sed nibh. In lorem erat, elementum quis tempus nec, rhoncus ac ante. Mauris suscipit massa tempor, pulvinar neque vel, gravida nulla. Donec massa diam, molestie in diam nec, vulputate faucibus ligula. Aliquam erat volutpat. Aliquam sit amet dui ligula. Nullam euismod eros ultrices magna convallis lobortis. Proin convallis placerat tincidunt. Quisque interdum, nisi id egestas luctus, augue libero lacinia urna, sit amet tempus nisl sem nec quam. Vestibulum interdum urna mauris, vel dignissim nisi dignissim egestas. Donec volutpat dictum dui, at egestas sem tristique nec. 
+### Benefits of becoming a Polyglot Programmer
+A polyglot programmer is a programmer / developer that knows multiple programming languages and is aware of their limitations and benefits. Such programmers are highly valued due to their extensive knowledge of programming languages and paradigms. 
+
+Polyglot programmers most likely have extensive knowledge of low-level programming giving them a solid understanding of how things work under the hood. They are able to differentiate between different data types and use the ones that are most efficient.
+
+Such programmers also have the ability to bridge multiple languages together if needed for the right reasons. Due to all the positive points discussed, polyglot programmers could find it fairly easy to find new jobs and are more employable, due to the diverse knowledge they have.
+
+Knowing more than one programming language will also make sure that programmers can keep their jobs while progressing with their goals and achieving higher standards. Due to many reasons companies may seek to use more than one language in this case, knowing multiple programming languages comes as a plus.
+Being polyglot means that the programmer is prepared in case a programming language dies away or a new language takes over. This helps avoid additional time being spent on learning a language due to the preparation done in advance.
+
+Many jobs now days are web related and require full stack programmers, meaning that programmers are required to know all the languages that form a stack in order to build completely robust and reliable websites or web applications. In such cases polyglot programmers have a great advantage as they don’t have to spend too much time upskilling.
+
+Apart from having benefits on the front of employability and finance, being a polyglot programmer allows programmers to be mentally sharp as, learning new languages introduces new features or insights that a programmer previously wasn’t aware of. This exercise helps the programmer keep his problem-solving ability constantly in use. Lastly to conclude, being a polyglot programmer is overall beneficial to both the programmer and the workplace he works in, as it will allow for personal growth as well as high performance at work.
+
