@@ -83,13 +83,13 @@ This challenge involved creating an advanced program that is able to read the da
 The overall challenge didn’t feel too difficult as some code snippets were obtained from the previous primer (primer 5). There was a lot of testing that was carried out to make sure that the table was well formatted once the data was parsed and displayed. 
 Since most of the functionality of the program had been divided into separate helper functions, debugging was very easy. The main hurdle that I faced was being able to understand, how far to automate the parser. In the end I decided to stick to the requirements and create a parser that can take data from a file and display it in a properly formatted table.
 
-##Primer 7 - Sleep timer
+### Primer 7 - Sleep timer
 This challenge involved creating a sleep timer function that was able to block the execution of the thread it’s being called by for a given number of seconds. The function had a default parameter of 10 seconds if the seconds parameter was not provided. To overcome the challenge, I was able to use the threading functionality from the standard library to allow the current thread to be halted (sleep_for) for a given number of seconds.
 
 #### Reflection (as well as issues, challenges & resolutions)
 The program was overall very straight forward to implement. Although I discovered a minor bug which was that the `sleep_for` function being used to halt the thread required the sleep time parameter to be in milliseconds. In order to avoid this logical error, I simply had to convert the seconds into milliseconds before passing it to the `sleep_for` function in the standard library.
 
-##Primer 8 - Joining & Detaching threads
+### Primer 8 - Joining & Detaching threads
 This challenge involved creating two helper functions that would mainly be used for the joining and detaching of the threads. The main purpose of the challenge was to experiment with threads and understand their purpose. I broke down the program into multiple functions so that it was easy to understand. The function breakdown has been explained below:
 * 2 Timer functions, each timer functions sleeps for a specific amount of time. Each function is to be used by the threads that are created. E.g., Timer 1 is to be used by thread 1 and timer 2 is to be used by Thread 2. In this manner it was easy to keep track of when the threads start and end.
 * Join function: This function was created to create two different threads and assigned timer 1 and timer 2 to them. Once the threads were created and assigned to the functions, I used the `.join` function to make sure that the main thread waits for the two threads to complete without carrying on with further instructions.
